@@ -19,6 +19,12 @@ spec:
           defaultClass: true
           reclaimPolicy: Retain
           archiveOnDelete: false
+        podSecurityContext:
+          runAsUser: null
+          runAsGroup: null
+        securityContext:
+          privileged: false
+          runAsUser: null
   destination:
     server: https://kubernetes.default.svc
     namespace: nfs-provisioner
